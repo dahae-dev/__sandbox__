@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    .nectar-hor-list-item {
+      display: flex;
+      margin: 20px 0;
+    }
+
+    .nectar-hor-list-item div {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <select id="first-filter" onchange="onFirstChange()">
+    <option value="all">ALL</option>
+    <option value="yujinrobot">Yujin Robot</option>
+    <option value="gocart">GoCart_Yujin Robot</option>
+    <option value="widefield">Wide Field of View</option>
+    <option value="ans">A.N.S_Yujin Robot</option>
+    <option value="sfs">S.F.S_Yujin Robot</option>
+    <option value="iclebo">iClebo</option>
+    <option value="ginaworld">Ginaworld</option>
+  <select>
+
+  <select id="second-filter" onchange="onSecondChange()">
+    <option value="all">ALL</option>
+    <option value="brochures">Brochures</option>
+    <option value="certificates">Certificates</option>
+    <option value="software">Software</option>
+  <select>
+
+  <div id="support-table">
+    <div class="row-bg-wrap"></div>
+    <div class="col span_12 left">
+      <div class="vc_col-sm-12 wpb_column column_container vc_column_container col has-animation no-extra-padding instance-7 animated-in">
+        <div class="column-bg-overlay"></div>
+        <div class="vc_column-inner">
+          <div class="wpb_wrapper">
+            <div class="nectar-hor-list-item has-btn">
+              <div>GoCart</div>
+              <div>Brochures</div>
+              <div>GoCart 120 V3.0</div>
+              <div>2019.03.21</div>
+            </div>
+            <div class="nectar-hor-list-item has-btn">
+              <div>GoCart</div>
+              <div>Certificates</div>
+              <div>GoCart 120 V3.0</div>
+              <div>2019.03.21</div>
+            </div>
+            <div class="nectar-hor-list-item has-btn">
+              <div>ANS</div>
+              <div>Brochures</div>
+              <div>ANS 120 V3.0</div>
+              <div>2019.03.21</div>
+            </div>
+            <div class="nectar-hor-list-item has-btn">
+              <div>SFS</div>
+              <div>Software</div>
+              <div>SFS 120 V3.0</div>
+              <div>2019.03.21</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let firstInput = '';
+    let first_filter = '';
+    let secondInput = '';
+    let second_filter = '';
+    let firstColumn = '';
+    let firstTxtValue = '';
+    let secondColumn = '';
+    let secondTxtValue = '';
+    const table = document.getElementById('support-table');
+    const inner_table = table.getElementsByClassName('col')[0];
+    const inner_inner_table = inner_table.getElementsByClassName('column_container')[0];
+    const inner_inner_inner_table = inner_inner_table.getElementsByClassName('vc_column-inner')[0];
+    const inner_inner_inner_inner_table = inner_inner_inner_table.getElementsByClassName('wpb_wrapper')[0];
+    const rows = inner_inner_inner_inner_table.getElementsByClassName('nectar-hor-list-item');
+
+    function onFirstChange() {
+      firstInput = document.getElementById('first-filter');
+      first_filter = firstInput.options[firstInput.selectedIndex].value;
+
+      for (let i = 0; i < rows.length; i++) {
+        firstColumn = rows[i].getElementsByTagName('div')[0];
+        firstTxtValue = firstColumn.textContent || firstColumn.innerText;
+        secondColumn = rows[i].getElementsByTagName('div')[1];
+        secondTxtValue = secondColumn.textContent || secondColumn.innerText;
+
+        if (secondTxtValue.toLowerCase().indexOf(second_filter) > -1 || second_filter === "all") {
+          if (first_filter === "all") {
+            rows[i].style.display = "";
+          } else {
+            if (firstTxtValue.toLowerCase().indexOf(first_filter) > -1) {
+              rows[i].style.display = "";
+            } else {
+              rows[i].style.display = "none";
+            }
+          }
+        } else {
+          rows[i].style.display = "none";
+        }
+      }
+    }
+
+    // TODO: hanldling to filter second option first
+    function onSecondChange() {
+      const secondInput = document.getElementById('second-filter');
+      const second_filter = secondInput.options[secondInput.selectedIndex].value;
+
+      for (let i = 0; i < rows.length; i++) {
+        firstColumn = rows[i].getElementsByTagName('div')[0];
+        firstTxtValue = firstColumn.textContent || firstColumn.innerText;
+        secondColumn = rows[i].getElementsByTagName('div')[1];
+        secondTxtValue = secondColumn.textContent || secondColumn.innerText;
+
+        if (firstTxtValue.toLowerCase().indexOf(first_filter) > -1 || first_filter === "all") {
+          if (second_filter === "all") {
+            rows[i].style.display = "";
+          } else {
+            if (secondTxtValue.toLowerCase().indexOf(second_filter) > -1) {
+              rows[i].style.display = "";
+            } else {
+              rows[i].style.display = "none";
+            }
+          }
+        } else {
+          rows[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+</body>

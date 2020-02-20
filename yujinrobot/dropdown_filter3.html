@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    .nectar-hor-list-item {
+      display: flex;
+      margin: 20px 0;
+    }
+
+    .nectar-hor-list-item div {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <select id="dropdown-filter" onchange="onChange(this)">
+    <option value="all">ALL</option>
+    <option value="yujin robot">Yujin Robot</option>
+    <option value="iclebo">iCLEBO</option>
+    <option value="gocart">GoCart</option>
+    <option value="lidar">LiDAR</option>
+    <option value="ans">ANS</option>
+    <option value="sfs">SFS</option>
+  </select>
+  <div id="career-opening-list">
+    <div class="row-bg-wrap"></div>
+    <div class="col span_12 dark left">
+      <div
+        class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding instance-12 no-left-margin"
+      >
+        <div class="column-bg-overlay"></div>
+        <div class="vc_column-inner">
+          <div class="wpb_wrapper">
+            <div
+              class="wpb_row vc_row-fluid vc_row inner_row standard_section    "
+            >
+              <div class="divider-wrap"></div>
+              <div class="toggles">
+                <div class="toggle default">
+                  <h3>
+                    <a href="#">
+                      <i class="icon-plus-sign"></i>
+                      [Yujin Robot] Senior Software Framework Developer
+                    </a>
+                  </h3>
+                </div>
+                <div class="toggle default">
+                  <h3>
+                    <a href="#">
+                      <i class="icon-plus-sign"></i>
+                      [iCLEBO] Junior Software Framework Developer
+                    </a>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    function onChange(el) {
+      var input = el
+      var filter = input.options[input.selectedIndex].value
+
+      var rows = document.querySelectorAll('.toggle')
+
+      for (var i = 0; i < rows.length; i++) {
+        var title = rows[i]
+          .getElementsByTagName('h3')[0]
+          .getElementsByTagName('a')[0].textContent
+        var service_name = title
+          .split(']')[0]
+          .trim()
+          .slice(1)
+          .toLowerCase()
+        console.log(service_name)
+
+        if (filter === 'all') {
+          rows[i].style.display = ''
+        } else {
+          if (service_name === filter) {
+            rows[i].style.display = ''
+          } else {
+            rows[i].style.display = 'none'
+          }
+        }
+      }
+    }
+  </script>
+</body>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    article {
+      display: flex;
+      margin: 20px 0;
+    }
+
+    article div {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <select id="resources-dropdown-filter" onchange="onFilterChange(this)" data-type="headquarter">
+    <option value="tag-all">ALL</option>
+    <option value="tag-brochure">Brochure</option>
+    <option value="tag-leaflet">Leaflet</option>
+    <option value="tag-certificate">Certificate</option>
+    <option value="tag-quick-guide">Quick Guide</option>
+  <select>
+
+  <div id="support-table">
+    <div class="row-bg-wrap"></div>
+    <div class="col span_12 left">
+      <div class="vc_col-sm-12 wpb_column column_container vc_column_container col has-animation no-extra-padding instance-7 animated-in">
+        <div class="column-bg-overlay"></div>
+        <div class="vc_column-inner">
+          <div class="wpb_wrapper">
+            <article class="category-support tag-brochure">
+              <div class="inner-wrap">
+                <div class="post-content">
+                  <div class="post-tags">
+                    <a href="/tag/quick-guide" class="brochure">Brochure</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="category-support tag-certificate">
+              <div class="inner-wrap">
+                <div class="post-content">
+                  <div class="post-tags">
+                    <a href="/tag/quick-guide" class="certificate">Certificate</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="category-support tag-leaflet">
+              <div class="inner-wrap">
+                <div class="post-content">
+                  <div class="post-tags">
+                    <a href="/tag/quick-guide" class="leaflet">Leaflet</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="category-support tag-manual">
+              <div class="inner-wrap">
+                <div class="post-content">
+                  <div class="post-tags">
+                    <a href="/tag/quick-guide" class="quick-guide">Quick Guide</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script type="text/javascript">
+  function onFilterChange(el) {
+      var input = el;
+      var filter = input.options[input.selectedIndex].value.slice(4);
+
+      var rows = document.querySelectorAll(".category-support");
+
+      for (var i = 0; i < rows.length; i++) {
+        var tag_name = rows[i].getElementsByTagName("a")[0].classList[0];
+
+        if (filter === "all") {
+          rows[i].style.display = "";
+        } else {
+          if (tag_name === filter) {
+            rows[i].style.display = "";
+          } else {
+            rows[i].style.display = "none";
+          }
+        }
+      }
+  }
+</script>
+</body>
+
+<!-- <script type="text/javascript">
+  function onHeadquarterChange(el) {
+    var input = el;
+    var filter = input.options[input.selectedIndex].value;
+
+    var rows = document.querySelectorAll(
+      "article.category-".concat(el.dataset.type)
+    );
+
+    for (let i = 0; i < rows.length; i++) {
+      if (filter === "category-all") {
+        rows[i].style.display = "";
+      } else {
+        if (Array.from(rows[i].classList).indexOf(filter) > -1) {
+          rows[i].style.display = "";
+        } else {
+          rows[i].style.display = "none";
+        }
+      }
+    }
+  }
+</script> -->
+
+<!-- <script type="text/javascript">
+  function onHeadquarterChange(el) {
+      var input = el;
+      var filter = input.options[input.selectedIndex].value;
+
+      var rows = document.querySelectorAll(
+          "article.category-".concat(el.dataset.type)
+      );
+
+      for (var i = 0; i < rows.length; i++) {
+          if (filter === "category-career") {
+              rows[i].style.display = "";
+          } else {
+              if (Array.from(rows[i].classList).indexOf(filter) > -1) {
+                rows[i].style.display = "";
+              } else {
+                rows[i].style.display = "none";
+              }
+          }
+      }
+  }
+</script> -->
+
+
+<!-- const table = document.getElementById('support-table');
+      const inner_table = table.getElementsByClassName('col')[0];
+      const inner_inner_table = inner_table.getElementsByClassName('column_container')[0];
+      const inner_inner_inner_table = inner_inner_table.getElementsByClassName('vc_column-inner')[0];
+      const inner_inner_inner_inner_table = inner_inner_inner_table.getElementsByClassName('wpb_wrapper')[0];
+      const rows = inner_inner_inner_inner_table.getElementsByClassName('nectar-hor-list-item'); -->
+

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    .careers-table {
+      display: flex;
+      justify-content: center;
+    }
+
+    .careers-table table {
+      border-collapse: collapse;
+      width: 100%;
+      border-top: 4px solid #00ace8 !important;
+    }
+
+    .careers-table table th {
+      background-color: #e7f6ff;
+    }
+
+    .careers-table table tr {
+      border-bottom: 1px solid #ddd;
+    }
+
+    .careers-table table td {
+      padding: 0.625em;
+    }
+
+    .careers-table table td:nth-child(odd) {
+      background-color: #f6f6f6;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 500;
+      color: #333;
+      width: 20%;
+    }
+
+    .careers-table table td:nth-child(even) {
+      font-size: 16px;
+    }
+
+    .careers-table table td.two-columns-td ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .careers-table table td.two-columns-td ul li {
+      margin-right: 12%;
+    }
+
+    .careers-table table td.three-columns-td {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .careers-table table td.three-columns-td ul li {
+      margin-bottom: 4%;
+    }
+
+    .careers-table table td.three-columns-td div,
+    .careers-table table td.two-columns-td div {
+      width: 33.3%;
+    }
+  </style>
+</head>
+<body>
+  <div class="careers-table">
+    <table>
+      <tr>
+        <td>PM</td>
+        <td>
+          <ul>
+            <li>Project Manager</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>H/W</td>
+        <td class="three-columns-td">
+          <div>
+            <ul>
+              <li>Mechanical Designer</li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li>Hardware Engineer</li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>S/W</td>
+        <td class="three-columns-td">
+          <div>
+            <ul>
+              <li>Mobile Robot Control Engineer</li>
+              <li>Software Engineer</li>
+              <li>Python Developer</li>
+              <li>DevOps</li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li>Manipulator Engineer</li>
+              <li>AI Engineer</li>
+              <li>Front-End Developer</li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li>Multiple Robot Control Engineer</li>
+              <li>App Developer</li>
+              <li>Back-End Developer</li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>QA</td>
+        <td>
+          <ul>
+            <li>Test Engineer</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>

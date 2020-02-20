@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    .ans-table {
+      display: flex;
+      justify-content: center;
+    }
+
+    .ans-table .font-blue {
+      color: #00ace8;
+      font-size: 16px !important;
+    }
+
+    .ans-table table {
+      border-top: 4px solid #00ace8 !important;
+      border-collapse: collapse;
+      width: 100%;
+      /* border-bottom: 1px solid #8c8c8c !important;
+  border-left: none !important;
+  border-right: none !important;
+  table-layout: fixed; */
+    }
+
+    /* .ans-table table tr {
+  border: 1px solid #ddd;
+} */
+
+    .ans-table table th,
+    .ans-table table td {
+      padding: 0.625em;
+      text-align: center;
+    }
+
+    .ans-table table th {
+      background-color: #f6f6f6;
+      border-bottom: 1px solid #8c8c8c !important;
+      font-size: 20px;
+      color: #333;
+      letter-spacing: 0.1em;
+      font-weight: 500;
+    }
+
+    .ans-table .solution-description {
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 0;
+      color: #666;
+    }
+
+    .ans-table table tr {
+      border-bottom: 1px solid #dedede !important;
+    }
+
+    .ans-table table .row-category {
+      background-color: #00ace8;
+      color: #fff;
+      width: 10%;
+      border-bottom: 1px solid #8c8c8c !important;
+      font-size: 20px !important;
+      font-weight: 500;
+    }
+
+    .ans-table table .border-bottom {
+      border-bottom: 1px solid #8c8c8c !important;
+    }
+
+    .ans-table table .attribute-name {
+      background-color: #e7f6ff;
+      text-align: left;
+      color: #666;
+    }
+
+    .ans-table th,
+    .ans-table td.row-category {
+      text-align: center !important;
+      vertical-align: middle;
+    }
+
+    body:not(.woocommerce-cart) .main-content th {
+      border-right: none;
+    }
+
+    body:not(.woocommerce-cart) .main-content tr th:first-child,
+    .ans-table table td.attribute-name {
+      border-right: 1px solid #dedede !important;
+    }
+
+    body:not(.woocommerce-cart) .main-content td {
+      border-width: 0;
+      font-size: 16px;
+    }
+
+    body:not(.woocommerce-cart) .main-content td,
+    body:not(.woocommerce-cart) .main-content tr td:first-child,
+    body:not(.woocommerce-cart) .main-content th,
+    body:not(.woocommerce-cart) .main-content tr th:first-child {
+      /* 	border-color: #ddd; */
+    }
+
+    body:not(.woocommerce-cart) .main-content tr th:first-child,
+    body:not(.woocommerce-cart) .main-content tr td:first-child {
+      border-left: none;
+    }
+
+    .border-right-none {
+      border-right: none !important;
+    }
+
+    body:not(.woocommerce-cart) .main-content table tr:nth-child(2n + 1) {
+      background-color: unset;
+    }
+
+    .table-icon:before {
+      content: '';
+      display: inline-block;
+      background-color: #00ace8;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      position: relative;
+      left: 8px;
+      top: -1px;
+    }
+
+    .table-icon:after {
+      content: '';
+      display: inline-block;
+      border: 1px solid #00ace8;
+      border-radius: 50%;
+      width: 14px;
+      height: 14px;
+      position: relative;
+      left: -5px;
+      top: 2px;
+    }
+
+    @media only screen and (max-width: 690px) and (min-width: 600px) {
+      .ans-table .solution-description {
+        font-size: 0.55em;
+      }
+    }
+
+    @media only screen and (min-width: 600px), (min-device-width: 600px) {
+      .mobile-display {
+        display: none;
+      }
+    }
+
+    @media only screen and (max-width: 600px), (max-device-width: 600px) {
+      .ans-table table {
+        border: 0;
+      }
+
+      .mobile-display-none {
+        display: none;
+      }
+
+      .mobile-col {
+        display: inline-block;
+      }
+
+      .ans-table table tr {
+        display: block;
+      }
+
+      .ans-table .row-category {
+        text-align: center;
+        display: none;
+        font-size: 16px;
+      }
+
+      .ans-table table td,
+      .ans-table .attribute-name {
+        display: inline-block;
+      }
+
+      .ans-table table td,
+      .ans-table .attribute-name,
+      .ans-table .font-blue {
+        font-size: 14px !important;
+      }
+
+      .ans-table table {
+        border-top: none !important;
+      }
+
+      .ans-table table th {
+        border-bottom: none !important;
+        font-size: 16px;
+      }
+
+      .ans-table table .border-bottom {
+        border-bottom: 1px solid #dedede !important;
+      }
+
+      .ans-table table td.attribute-name {
+        border-right: none !important;
+      }
+
+      .row-category {
+        background-color: #00ace8 !important;
+        color: #fff;
+      }
+
+      .attribute-name {
+        background-color: #e7f6ff;
+      }
+
+      .ans-table table td:last-child {
+        border-bottom: 0;
+      }
+
+      .mobile-text-sw,
+      .mobile-text-hw {
+        background-color: #00ace8 !important;
+      }
+
+      .mobile-second-table {
+        margin-top: 30px;
+      }
+
+      th.mobile-col,
+      td.mobile-inline-block {
+        width: 16%;
+      }
+
+      .mobile-text-sw,
+      .mobile-text-hw,
+      .attribute-name {
+        width: 42% !important;
+      }
+
+      .mobile-text-sw:before {
+        content: 'S/W';
+        font-size: 16px;
+        color: #fff;
+      }
+
+      .mobile-text-hw:before {
+        content: 'H/W';
+        font-size: 16px;
+        color: #fff;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="ans-table">
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2" scope="col" class="mobile-col mobile-text-sw">
+            <span class="mobile-display-none">Solution</span>
+          </th>
+          <th scope="col" class="mobile-col">
+            YSP<br />
+            <span class="solution-description mobile-display-none"
+              >Yujin SLAM Package</span
+            >
+          </th>
+          <th scope="col" class="mobile-col">
+            YNP<br />
+            <span class="solution-description mobile-display-none"
+              >Yujin Navigation Package</span
+            >
+          </th>
+          <th scope="col" class="mobile-col border-right-none">
+            ANS<br />
+            <span class="solution-description mobile-display-none"
+              >Autonomous Navigation Solution</span
+            >
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="7" class="row-category">S/W</td>
+          <td data-label="solution" class="attribute-name">Mapping</td>
+          <td data-label="YSP" class="mobile-inline-block">
+            <i class="table-icon"></i>
+          </td>
+          <td data-label="YNP" class="mobile-inline-block">
+            <i class="table-icon"></i>
+          </td>
+          <td data-label="ANS" class="mobile-inline-block border-right-none">
+            <i class="table-icon"></i>
+          </td>
+        </tr>
+        <tr>
+          <td data-label="solution" class="attribute-name">Localization</td>
+          <td data-label="YSP" class="mobile-inline-block">
+            <i class="table-icon"></i>
+          </td>
+          <td data-label="YNP" class="mobile-inline-block">
+            <i class="table-icon"></i>
+          </td>
+          <td data-label="ANS" class="mobile-inline-block border-right-none">
+            <i class="table-icon"></i>
+          </td>
+        </tr>
+        <tr>
+          <td data-label="solution" class="attribute-name">Path Tracking</td>
+          <td data-label="YSP" class="mobile-inline-block">-</td>
+          <td data-label="YNP" class="mobile-inline-block">
+            <i class="table-icon"></i>
+          </td>
+          <td data-label="ANS" class="mobile-inline-block border-right-none">
+            <i class="table-icon"></i>
+          </td>
+        </tr>
+        <tr>
+          <td data-label="solution" class="attribute-name">Path Planning</td>
+          <td data-label="YSP" class="mobile-inline-block">-</td>
+          <td data-label="YNP" class="mobile-inline-block">
+            <i class="table-icon"></i>
+          </td>
+          <td data-label="ANS" class="mobile-inline-block border-right-none">
+            <i class="table-icon"></i>
+          </td>
+        </tr>
+        <tr>
+          <td data-label="solution" class="attribute-name">
+            Obstacle Detection
+          </td>
+          <td data-label="YSP" class="mobile-inline-block">-</td>
+          <td data-label="YNP" class="mobile-inline-block">
+            <i class="table-icon"></i>
+          </td>
+          <td data-label="ANS" class="mobile-inline-block border-right-none">
+            <i class="table-icon"></i>
+          </td>
+        </tr>
+        <tr>
+          <td data-label="solution" class="attribute-name">
+            FMSM<span class="mobile-display-none"
+              >(Fleet Management System)</span
+            >
+          </td>
+          <td data-label="YSP" class="mobile-inline-block">-</td>
+          <td data-label="YNP" class="mobile-inline-block">-</td>
+          <td data-label="ANS" class="mobile-inline-block border-right-none">
+            <i class="table-icon"></i>
+          </td>
+        </tr>
+        <tr class="border-bottom">
+          <td data-label="solution" class="attribute-name">
+            Customized Software
+          </td>
+          <td data-label="YSP" class="mobile-inline-block">-</td>
+          <td data-label="YNP" class="mobile-inline-block">-</td>
+          <td data-label="ANS" class="mobile-inline-block border-right-none">
+            <i class="table-icon"></i>
+          </td>
+        </tr>
+        <tr class="mobile-display mobile-second-table">
+          <th colspan="2" scope="col" class="mobile-col mobile-text-hw">
+            <span class="mobile-display-none">Solution</span>
+          </th>
+          <th scope="col" class="mobile-col">
+            YSP<br />
+            <span class="solution-description mobile-display-none"
+              >Yujin SLAM Package</span
+            >
+          </th>
+          <th scope="col" class="mobile-col">
+            YNP<br />
+            <span class="solution-description mobile-display-none"
+              >Yujin Navigation Package</span
+            >
+          </th>
+          <th scope="col" class="mobile-col border-right-none">
+            ANS<br />
+            <span class="solution-description mobile-display-none"
+              >Autonomous Navigation Solution</span
+            >
+          </th>
+        </tr>
+        <tr>
+          <td rowspan="4" class="row-category no-border-bottom">H/W</td>
+          <td data-label="solution" class="attribute-name">
+            LiDAR / Stereo Camera
+          </td>
+          <td data-label="YSP" class="mobile-inline-block font-blue">OR</td>
+          <td data-label="YNP" class="mobile-inline-block font-blue">OR</td>
+          <td
+            data-label="ANS"
+            class="mobile-inline-block font-blue border-right-none"
+          >
+            AND
+          </td>
+        </tr>
+        <tr>
+          <td data-label="solution" class="attribute-name">
+            Driving Controller
+          </td>
+          <td data-label="YSP" class="mobile-inline-block">-</td>
+          <td data-label="YNP" class="mobile-inline-block">-</td>
+          <td data-label="ANS" class="mobile-inline-block border-right-none">
+            <i class="table-icon"></i>
+          </td>
+        </tr>
+        <tr>
+          <td data-label="solution" class="attribute-name">
+            Sensor Controller
+          </td>
+          <td data-label="YSP" class="mobile-inline-block">-</td>
+          <td data-label="YNP" class="mobile-inline-block">-</td>
+          <td data-label="ANS" class="mobile-inline-block border-right-none">
+            <i class="table-icon"></i>
+          </td>
+        </tr>
+        <tr class="border-bottom">
+          <td data-label="solution" class="attribute-name">
+            Customized Hardware
+          </td>
+          <td data-label="YSP" class="mobile-inline-block">-</td>
+          <td data-label="YNP" class="mobile-inline-block">-</td>
+          <td data-label="ANS" class="mobile-inline-block border-right-none">
+            <i class="table-icon"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>

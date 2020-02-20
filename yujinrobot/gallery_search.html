@@ -1,0 +1,27 @@
+<input
+  type="search"
+  value=""
+  name="search"
+  id="my-search"
+  onkeyup="searchGallery()"
+  placeholder="Search..."
+/>
+
+<script type="text/javascript">
+  function searchGallery() {
+    var input = document.getElementById('my-search')
+    var filter = input.value.toLowerCase()
+    var gallery = document.getElementById('more-features')
+    var imageContainer = gallery.getElementsByClassName(
+      'gallery-image-container',
+    )
+
+    for (var i = 0; i < imageContainer.length; i++) {
+      if (imageContainer[i].innerText.toLowerCase().includes(filter)) {
+        imageContainer[i].style.display = ''
+      } else {
+        imageContainer[i].style.display = 'none'
+      }
+    }
+  }
+</script>

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    #toggle-tab-inner-container {
+      margin: 0 auto;
+      width: 80%;
+      height: 100%;
+      background-color: #e7f6ff;
+      padding: 4% 3%;
+    }
+    .history-list-container {
+      margin: 20px 30px;
+    }
+
+    .history-list-row {
+      display: flex;
+      position: relative;
+    }
+
+    .history-year {
+      width: 9%;
+      font-size: 16px;
+      font-weight: 700;
+      color: #333;
+      font-family: Roboto;
+    }
+
+    .history-year-not-display {
+      color: #e7f6ff;
+    }
+
+    .history-month {
+      width: 3%;
+      font-size: 14px;
+      font-weight: 700;
+      color: #333;
+      font-family: Roboto;
+    }
+
+    .history-content {
+      width: 90%;
+      font-size: 14px;
+      color: #333;
+      font-family: Roboto;
+    }
+
+    .history-list-row:before {
+      content: '';
+      height: 50px;
+      width: 2px;
+      background: #00ace8;
+      position: absolute;
+      left: -20px;
+    }
+
+    .history-year:before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      display: inline-block;
+      background: #e7f6ff;
+      border: 2px solid #00ace8;
+      border-radius: 50%;
+      position: absolute;
+      left: -24px;
+    }
+
+    @media only screen and (max-width: 1299px) and (min-width: 1190px) {
+      .history-year {
+        width: 10%;
+      }
+    }
+
+    @media only screen and (max-width: 1189px) and (min-width: 1090px) {
+      .history-year {
+        width: 11%;
+      }
+    }
+
+    @media only screen and (max-width: 1089px) and (min-width: 1000px) {
+      .history-year {
+        width: 12%;
+      }
+    }
+
+    @media only screen and (max-width: 999px) {
+      .history-year {
+        width: 18%;
+      }
+
+      .history-month {
+        width: 5%;
+      }
+
+      .history-content {
+        width: 70%;
+      }
+    }
+
+    @media only screen and (max-width: 690px) {
+      .history-year {
+        width: 25%;
+      }
+
+      .history-month {
+        width: 7%;
+      }
+
+      .history-content {
+        width: 65%;
+      }
+    }
+
+    @media only screen and (max-width: 500px) {
+      .history-year {
+        width: 15%;
+      }
+
+      .history-month {
+        width: 10%;
+      }
+
+      .history-content {
+        width: 70%;
+      }
+
+      .history-month:before {
+        content: '';
+        height: 0;
+        width: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="toggle-tab-inner-container">
+    <div class="history-list-container">
+      <div class="history-list-row first-row-with-line">
+        <div class="history-year">2019</div>
+      </div>
+      <div class="history-list-row">
+        <div class="history-month">09</div>
+        <div class="history-content">
+          Awarded with 2019 CSBA(Customer Satisfaction Brand Award)
+        </div>
+      </div>
+      <div class="history-list-row">
+        <div class="history-month">03</div>
+        <div class="history-content">
+          Certified as CCC(China Quality Certification)
+        </div>
+      </div>
+    </div>
+    <div class="history-list-container">
+      <div class="history-list-row">
+        <div class="history-year">2018</div>
+      </div>
+      <div class="history-list-row">
+        <div class="history-month">12</div>
+        <div class="history-content">
+          Cleaning robot was selected as the world’s Top product (Ministry of
+          Knowledge & Economy)
+        </div>
+      </div>
+      <div class="history-list-row">
+        <div class="history-month">10</div>
+        <div class="history-content">
+          Certified as CE(Conformity European Marking)
+        </div>
+      </div>
+    </div>
+    <div class="history-list-container">
+      <div class="history-list-row">
+        <div class="history-year">2017</div>
+      </div>
+      <div class="history-list-row">
+        <div class="history-month">12</div>
+        <div class="history-content">
+          Awarded with CAPEK from China Robots Association
+        </div>
+      </div>
+      <div class="history-list-row">
+        <div class="history-month">07</div>
+        <div class="history-content">
+          Designation of Global Excellence Technology Research Center (Ministry
+          of Industrial Statistics and Resources)
+        </div>
+      </div>
+      <div class="history-list-row">
+        <div class="history-month">04</div>
+        <div class="history-content">
+          Certified as ROHS(Restriction of Hazardous Substances)
+        </div>
+      </div>
+    </div>
+    <div class="history-list-container">
+      <div class="history-list-row">
+        <div class="history-year">2016</div>
+      </div>
+      <div class="history-list-row">
+        <div class="history-month">12</div>
+        <div class="history-content">
+          Awarded with Tower of 20 million-dollar export (Korea Trade
+          Association)
+        </div>
+      </div>
+      <div class="history-list-row">
+        <div class="history-month">06</div>
+        <div class="history-content">
+          Certified as FCC(Federal Communication Commission)
+        </div>
+      </div>
+      <div class="history-list-row">
+        <div class="history-month">04</div>
+        <div class="history-content">
+          Certified as CEC(Chartered Engineer's Certificate)
+        </div>
+      </div>
+    </div>
+    <div class="history-list-container">
+      <div class="history-list-row">
+        <div class="history-year">2014</div>
+      </div>
+      <div class="history-list-row">
+        <div class="history-month">06</div>
+        <div class="history-content">
+          Acquiring quality certification for intelligent robots(KIRIA)
+        </div>
+      </div>
+    </div>
+    <div class="history-list-container">
+      <div class="history-list-row">
+        <div class="history-year">2013</div>
+      </div>
+      <div class="history-list-row">
+        <div class="history-month">12</div>
+        <div class="history-content">
+          Iclebo, cleaning robot, was selected as a product that shines this
+          year of Korea
+        </div>
+      </div>
+    </div>
+    <div class="history-list-container">
+      <div class="history-list-row">
+        <div class="history-year">2012</div>
+      </div>
+      <div class="history-list-row">
+        <div class="history-month">10</div>
+        <div class="history-content">
+          IClebo arte was awarded with the KES Award for Best Design
+        </div>
+      </div>
+      <div class="history-list-row">
+        <div class="history-month">06</div>
+        <div class="history-content">
+          Irobi Home, education robot for home, was released
+        </div>
+      </div>
+      <div class="history-list-row">
+        <div class="history-month">01</div>
+        <div class="history-content">
+          Service Robot was selected as a brand for Hi-Seoul
+        </div>
+      </div>
+    </div>
+    <div class="history-list-container">
+      <div class="history-list-row">
+        <div class="history-year">2011</div>
+      </div>
+      <div class="history-list-row">
+        <div class="history-month">12</div>
+        <div class="history-content">
+          Selected as the world’s Top product by Ministry of Knowledge & Economy
+        </div>
+      </div>
+      <div class="history-list-row">
+        <div class="history-month">12</div>
+        <div class="history-content">
+          Awarded with Tower of 5 million-dollar export (Korea Trade
+          Association)
+        </div>
+      </div>
+      <div class="history-list-row">
+        <div class="history-month">01</div>
+        <div class="history-content">
+          Iclebo, cleaning robot, was selected as a brand for Hi-Seoul
+        </div>
+      </div>
+    </div>
+    <div class="history-list-container">
+      <div class="history-list-row">
+        <div class="history-year">2010</div>
+      </div>
+      <div class="history-list-row">
+        <div class="history-month">12</div>
+        <div class="history-content">
+          Iclebo, cleaning robot, acquired the smart intelligence-type quality
+          certificate
+        </div>
+      </div>
+      <div class="history-list-row">
+        <div class="history-month">10</div>
+        <div class="history-content">
+          Selected as Technology-innovation small/medium company (INNO-BIZ)
+        </div>
+      </div>
+      <div class="history-list-row last-row-with-line">
+        <div class="history-month">07</div>
+        <div class="history-content">
+          Icelbo smart, cleaning robot, home was released
+        </div>
+      </div>
+    </div>
+    <div class="history-list-container">
+      <div class="history-list-row row-with-no-line">
+        <div class="history-year">2009</div>
+      </div>
+      <div class="history-list-row row-with-no-line">
+        <div class="history-month">11</div>
+        <div class="history-content">
+          Awarded with Tower of one million-dollar export (Korea Trade
+          Association) – the first time as a service robot company
+        </div>
+      </div>
+      <div class="history-list-row row-with-no-line">
+        <div class="history-month">09</div>
+        <div class="history-content">
+          Acquired the ISO 14001 Environment management system certificate (KAB)
+        </div>
+      </div>
+      <div class="history-list-row row-with-no-line">
+        <div class="history-month">07</div>
+        <div class="history-content">
+          Selected as a promising small/medium company for export (Seoul
+          regional small/medium business administration)
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<!-- stage 2 -->
+
+<div class="toggle-tab-inner-container">
+  <div class="history-list-container">
+    <div class="history-list-row first-row-with-line">
+      <div class="history-year">2008</div>
+    </div>
+    <div class="history-list-row">
+      <div class="history-month">10</div>
+      <div class="history-content">
+        Released Iclebo Alpha, cleaning robot and Irobi, education robot for kid
+      </div>
+    </div>
+  </div>
+  <div class="history-list-container">
+    <div class="history-list-row">
+      <div class="history-year">2007</div>
+    </div>
+    <div class="history-list-row">
+      <div class="history-month">12</div>
+      <div class="history-content">
+        Released Iccomppa ppororo, educational toy robot
+      </div>
+    </div>
+    <div class="history-list-row">
+      <div class="history-month">04</div>
+      <div class="history-content">Released Iclebo free, cleaning robot</div>
+    </div>
+  </div>
+  <div class="history-list-container">
+    <div class="history-list-row">
+      <div class="history-year">2006</div>
+    </div>
+    <div class="history-list-row">
+      <div class="history-month">11</div>
+      <div class="history-content">
+        Irobi Q was awarded with Korea’s U-robot grand-prize (Ministry of
+        Information and Communication)
+      </div>
+    </div>
+    <div class="history-list-row">
+      <div class="history-month">09</div>
+      <div class="history-content">
+        Started to export cleaning robots (Europe, Japan, Canada, etc.)
+      </div>
+    </div>
+  </div>
+  <div class="history-list-container">
+    <div class="history-list-row">
+      <div class="history-year">2005</div>
+    </div>
+    <div class="history-list-row">
+      <div class="history-month">11</div>
+      <div class="history-content">Acquired ISO 9001 certificate</div>
+    </div>
+    <div class="history-list-row">
+      <div class="history-month">10</div>
+      <div class="history-content">
+        Listed to KOSDAQ (merged with Gina World)
+      </div>
+    </div>
+    <div class="history-list-row">
+      <div class="history-month">01</div>
+      <div class="history-content">Released Iclebo, cleaning robot</div>
+    </div>
+  </div>
+  <div class="history-list-container">
+    <div class="history-list-row">
+      <div class="history-year">2004</div>
+    </div>
+    <div class="history-list-row">
+      <div class="history-month">12</div>
+      <div class="history-content">
+        Robhaz, robot doing dangerous work, was awarded with the new technology
+        (KT certificate) (Ministry of Science and Technology)
+      </div>
+    </div>
+    <div class="history-list-row">
+      <div class="history-month">11</div>
+      <div class="history-content">
+        Irobi was awarded with the grand-prize from the Intelligence-type robot
+        technology evaluation contest (Ministry of Industry and Resources)
+      </div>
+    </div>
+    <div class="history-list-row">
+      <div class="history-month">06</div>
+      <div class="history-content">Released Irobi, home robot</div>
+    </div>
+    <div class="history-list-row row-with-longer-line">
+      <div class="history-month">04</div>
+      <div class="history-content">
+        Commercialization of robot doing dangerous work (export to Japan and
+        Australia and delivery to Zaytun Division)
+      </div>
+    </div>
+  </div>
+  <div class="history-list-container">
+    <div class="history-list-row">
+      <div class="history-year">2003</div>
+    </div>
+    <div class="history-list-row row-with-longer-line">
+      <div class="history-month">02</div>
+      <div class="history-content">
+        Selected as the national excellent manufacturing technology center
+        (Ministry of Industry and Resources)
+      </div>
+    </div>
+  </div>
+  <div class="history-list-container">
+    <div class="history-list-row">
+      <div class="history-year">2001</div>
+    </div>
+    <div class="history-list-row row-with-longer-line last-row-with-line">
+      <div class="history-month">01</div>
+      <div class="history-content">
+        Hosting institution for development task of robots for next-generation
+        games/entertainment (Ministry of Industry and Resources)
+      </div>
+    </div>
+  </div>
+  <div class="history-list-container">
+    <div class="history-list-row row-with-no-line">
+      <div class="history-year">1999</div>
+    </div>
+    <div class="history-list-row row-with-no-line">
+      <div class="history-month">08</div>
+      <div class="history-content">
+        Co-development of robot doing dangerous work with Korea Science
+        Technology Research Institute (Ministry of Science and Technology)
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- stage 3 -->
+
+<div class="toggle-tab-inner-container">
+  <div class="history-list-container">
+    <div class="history-list-row first-row-with-line">
+      <div class="history-year">1997</div>
+    </div>
+    <div class="history-list-row">
+      <div class="history-month">06</div>
+      <div class="history-content">
+        Developed the acceleration Sensor semi-condoctor TTT system (Motorola)
+      </div>
+    </div>
+    <div class="history-list-row">
+      <div class="history-month">02</div>
+      <div class="history-content">
+        Established Intelligence-type robot company’s annex research center
+      </div>
+    </div>
+  </div>
+  <div class="history-list-container">
+    <div class="history-list-row">
+      <div class="history-year">1996</div>
+    </div>
+    <div class="history-list-row">
+      <div class="history-month">12</div>
+      <div class="history-content">
+        Completed automation of 6 German factories and established Fatec by
+        cooperating with robot company
+      </div>
+    </div>
+    <div class="history-list-row">
+      <div class="history-month">09</div>
+      <div class="history-content">
+        Made distribution contracts with Staubi Robot and Climetrix
+      </div>
+    </div>
+  </div>
+  <div class="history-list-container">
+    <div class="history-list-row">
+      <div class="history-year">1995</div>
+    </div>
+    <div class="history-list-row">
+      <div class="history-month">07</div>
+      <div class="history-content">
+        Developed all-automatic Marking Robot system (Hyundai Heavy Industry)
+      </div>
+    </div>
+  </div>
+  <div class="history-list-container">
+    <div class="history-list-row last-row-with-line">
+      <div class="history-year">1990</div>
+    </div>
+    <div class="history-list-row last-row-with-line">
+      <div class="history-month">03</div>
+      <div class="history-content">
+        Made System House contract with Adept, U.S.
+      </div>
+    </div>
+  </div>
+  <div class="history-list-container">
+    <div class="history-list-row row-with-no-line">
+      <div class="history-year">1988</div>
+    </div>
+    <div class="history-list-row row-with-no-line">
+      <div class="history-month">03</div>
+      <div class="history-content">Established Yujin Robotics, Co., Ltd.</div>
+    </div>
+  </div>
+</div>

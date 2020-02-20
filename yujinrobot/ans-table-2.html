@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    .ans-table {
+      display: flex;
+      justify-content: center;
+    }
+
+    .ans-table table {
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+      width: 100%;
+      table-layout: fixed; /* make columns width even */
+    }
+
+    .ans-table table th,
+    .ans-table .row-category {
+      background-color: #eee;
+    }
+
+    .ans-table table tr {
+      border: 1px solid #ddd;
+      /* padding: 0.35em; */
+    }
+
+    .ans-table table tr:nth-child(even) {
+      background-color: #f8f8f8;
+    }
+
+    .ans-table table th,
+    .ans-table table td {
+      padding: 0.625em;
+      text-align: center;
+    }
+
+    .ans-table .solution-name {
+      text-align: left;
+    }
+
+    .ans-table table th {
+      /* font-size: 0.85em; */
+      letter-spacing: 0.1em;
+    }
+
+    .ans-table .solution-description {
+      font-size: 0.85em;
+    }
+
+    @media only screen and (max-width: 400px), (max-device-width: 400px) {
+      .ans-table table {
+        border: 0;
+      }
+
+      .ans-table table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+      }
+
+      .ans-table table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: 0.625em;
+      }
+
+      .ans-table .row-category {
+        text-align: center;
+      }
+
+      .ans-table table td,
+      .ans-table .solution-name {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: 0.8em;
+        text-align: right;
+      }
+
+      .ans-table table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+      }
+
+      .ans-table table td:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    .table-icon:before {
+      content: '';
+      display: inline-block;
+      background-color: #00ace8;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      position: relative;
+      left: 8px;
+      top: -3px;
+    }
+
+    .table-icon:after {
+      content: '';
+      display: inline-block;
+      border: 1px solid #00ace8;
+      border-radius: 50%;
+      width: 14px;
+      height: 14px;
+      position: relative;
+      left: -5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="ans-table">
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2" scope="col">Solution</th>
+          <th scope="col">
+            YSP<br />
+            <span class="solution-description">Yujin SLAM Package</span>
+          </th>
+          <th scope="col">
+            YNP<br />
+            <span class="solution-description">Yujin Navigation Package</span>
+          </th>
+          <th scope="col">
+            ANS<br />
+            <span class="solution-description"
+              >Autonomous Navigation Solution</span
+            >
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="7" class="row-category">S/W</td>
+          <td data-label="solution" class="solution-name">Mapping</td>
+          <td data-label="YSP"><i class="table-icon"></i></td>
+          <td data-label="YNP">O</td>
+          <td data-label="ANS">O</td>
+        </tr>
+        <tr>
+          <td data-label="solution" class="solution-name">Localization</td>
+          <td data-label="YSP">O</td>
+          <td data-label="YNP">O</td>
+          <td data-label="ANS">O</td>
+        </tr>
+        <tr>
+          <td data-label="solution" class="solution-name">Path Tracking</td>
+          <td data-label="YSP">-</td>
+          <td data-label="YNP">O</td>
+          <td data-label="ANS">O</td>
+        </tr>
+        <tr>
+          <td data-label="solution" class="solution-name">Path Planning</td>
+          <td data-label="YSP">-</td>
+          <td data-label="YNP">O</td>
+          <td data-label="ANS">O</td>
+        </tr>
+        <tr>
+          <td data-label="solution" class="solution-name">
+            Obstacle Detection
+          </td>
+          <td data-label="YSP">-</td>
+          <td data-label="YNP">O</td>
+          <td data-label="ANS">O</td>
+        </tr>
+        <tr>
+          <td data-label="solution" class="solution-name">
+            FMS(Fleet Management System)
+          </td>
+          <td data-label="YSP">-</td>
+          <td data-label="YNP">-</td>
+          <td data-label="ANS">O</td>
+        </tr>
+        <tr>
+          <td data-label="solution" class="solution-name">
+            Customized Software
+          </td>
+          <td data-label="YSP">-</td>
+          <td data-label="YNP">-</td>
+          <td data-label="ANS">O</td>
+        </tr>
+        <tr>
+          <td rowspan="4" class="row-category no-border-bottom">H/W</td>
+          <td data-label="solution" class="solution-name">
+            LiDAR / Stereo Camera
+          </td>
+          <td data-label="YSP">OR</td>
+          <td data-label="YNP">OR</td>
+          <td data-label="ANS">AND</td>
+        </tr>
+        <tr>
+          <td data-label="solution" class="solution-name">
+            Driving Controller
+          </td>
+          <td data-label="YSP">-</td>
+          <td data-label="YNP">-</td>
+          <td data-label="ANS">O</td>
+        </tr>
+        <tr>
+          <td data-label="solution" class="solution-name">
+            Sensor Controller
+          </td>
+          <td data-label="YSP">-</td>
+          <td data-label="YNP">-</td>
+          <td data-label="ANS">O</td>
+        </tr>
+        <tr>
+          <td data-label="solution" class="solution-name">
+            Customized Hardware
+          </td>
+          <td data-label="YSP">-</td>
+          <td data-label="YNP">-</td>
+          <td data-label="ANS">O</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>

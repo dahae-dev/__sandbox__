@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<head> </head>
+<body>
+  <input
+    type="search"
+    value=""
+    name="search"
+    id="all-search"
+    onkeyup="searchTabAll()"
+    placeholder="Search..."
+  />
+
+  <div id="tab-all">
+    <div class="wpb_text_column wpb_content_element ">
+      <div class="wpb_wrapper">
+        <div class="row">
+          <div class="post-area col featured_img_left span_12 col_last    ">
+            <div class="posts-container">
+              <article
+                class="post-7328 post type-post status-publish format-standard has-post-thumbnail category-media category-sfs-media"
+              >
+                <div class="inner-wrap">
+                  <div class="post-content">
+                    <div class="article-content-wrap">
+                      <div class="post-featured-img-wrap"></div>
+                      <div class="post-content-wrap">
+                        <a
+                          class="entire-meta-link"
+                          href="https://yujinrobotcom.wpcomstaging.com/2019/10/12/media-sfs/"
+                        ></a>
+                        <span class="meta-category"></span>
+                        <div class="post-header">
+                          <h3 class="title">
+                            <a
+                              href="https://yujinrobotcom.wpcomstaging.com/2019/10/12/media-sfs/"
+                              >SFS</a
+                            >
+                          </h3>
+                        </div>
+                        <div class="excerpt">
+                          11111. 기준일 공고 상법 제354조 및 우리 회사 정관
+                          제15조에 의거하여 임시주주총회 소집을 위하여, 2019년…
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article
+                class="post-7328 post type-post status-publish format-standard has-post-thumbnail category-media category-sfs-media"
+              >
+                <div class="inner-wrap">
+                  <div class="post-content">
+                    <div class="article-content-wrap">
+                      <div class="post-featured-img-wrap"></div>
+                      <div class="post-content-wrap">
+                        <a
+                          class="entire-meta-link"
+                          href="https://yujinrobotcom.wpcomstaging.com/2019/10/12/media-sfs/"
+                        ></a>
+                        <span class="meta-category"></span>
+                        <div class="post-header">
+                          <h3 class="title">
+                            <a
+                              href="https://yujinrobotcom.wpcomstaging.com/2019/10/12/media-sfs/"
+                              >Yujin Robot</a
+                            >
+                          </h3>
+                        </div>
+                        <div class="excerpt">
+                          1. 기준일 공고 상법 제354조 및 우리 회사 정관 제15조에
+                          의거하여 임시주주총회 소집을 위하여, 2019년…
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article
+                class="post-7328 post type-post status-publish format-standard has-post-thumbnail category-media category-sfs-media"
+              >
+                <div class="inner-wrap">
+                  <div class="post-content">
+                    <div class="article-content-wrap">
+                      <div class="post-featured-img-wrap"></div>
+                      <div class="post-content-wrap">
+                        <a
+                          class="entire-meta-link"
+                          href="https://yujinrobotcom.wpcomstaging.com/2019/10/12/media-sfs/"
+                        ></a>
+                        <span class="meta-category"></span>
+                        <div class="post-header">
+                          <h3 class="title">
+                            <a
+                              href="https://yujinrobotcom.wpcomstaging.com/2019/10/12/media-sfs/"
+                              >GoCart</a
+                            >
+                          </h3>
+                        </div>
+                        <div class="excerpt">
+                          유진로봇이 10월 9일부터 12일까지 일산 킨텍스에서
+                          개최되는 국내 최대 로봇축제 ‘2019 로보월드’에 참가해
+                          유진로봇이 연구,…
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article
+                class="post-7328 post type-post status-publish format-standard has-post-thumbnail category-media category-sfs-media"
+              >
+                <div class="inner-wrap">
+                  <div class="post-content">
+                    <div class="article-content-wrap">
+                      <div class="post-featured-img-wrap"></div>
+                      <div class="post-content-wrap">
+                        <a
+                          class="entire-meta-link"
+                          href="https://yujinrobotcom.wpcomstaging.com/2019/10/12/media-sfs/"
+                        ></a>
+                        <span class="meta-category"></span>
+                        <div class="post-header">
+                          <h3 class="title">
+                            <a
+                              href="https://yujinrobotcom.wpcomstaging.com/2019/10/12/media-sfs/"
+                              >iClebo Arte</a
+                            >
+                          </h3>
+                        </div>
+                        <div class="excerpt">
+                          유진로봇은 이번 CES 2019에서 독자적으로...
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    function includes(container, value) {
+      var returnValue = false
+      var pos = container.indexOf(value)
+      if (pos >= 0) {
+        returnValue = true
+      }
+      return returnValue
+    }
+
+    function searchTabAll() {
+      var input = document.getElementById('all-search')
+      var filter = input.value.toLowerCase()
+      var gallery = document.getElementById('tab-all')
+      var articles = gallery.getElementsByTagName('article')
+
+      for (var i = 0; i < articles.length; i++) {
+        var title = articles[i]
+          .getElementsByClassName('title')[0]
+          .innerText.toLowerCase()
+        var excerpt = articles[i]
+          .getElementsByClassName('excerpt')[0]
+          .innerText.toLowerCase()
+        var content = title + ' ' + excerpt
+        console.log(content)
+        if (includes(content, filter)) {
+          articles[i].style.display = ''
+        } else {
+          articles[i].style.display = 'none'
+        }
+      }
+    }
+  </script>
+</body>
+
+<!-- <script type="text/javascript">
+  function searchTabAll() {
+    var input = document.getElementById('all-search')
+    var filter = input.value.toLowerCase()
+    var gallery = document.getElementById('tab-all')
+    var articles = gallery.getElementsByTagName('article')
+
+    for (var i = 0; i < articles.length; i++) {
+      var title = articles[i].getElementsByClassName('title')
+      if (title[0].innerText.toLowerCase().includes(filter)) {
+        articles[i].style.display = ''
+      } else {
+        articles[i].style.display = 'none'
+      }
+    }
+  }
+</script> -->

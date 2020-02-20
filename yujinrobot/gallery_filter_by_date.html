@@ -1,0 +1,69 @@
+<p>Filter by date:</p>
+<label>From <input type="text" id="from" name="from"/></label>
+<label>to <input type="text" id="to" name="to"/></label>
+
+<button
+  class="nectar-button small regular-button"
+  data-color-override="false"
+  onclick="filterByDate()"
+>
+  Filter
+</button>
+
+<script type="text/javascript">
+  ;(function($) {
+    $('#from, #to').datepicker({ dateFormat: 'yy/mm/dd' })
+    var dateFormat = 'yy/mm/dd',
+      from = $('#from')
+        .datepicker({
+          defaultDate: '+1w',
+          changeMonth: true,
+          numberOfMonths: 1,
+        })
+        .on('change', function() {
+          to.datepicker('option', 'minDate', this.value)
+        }),
+      to = $('#to')
+        .datepicker({
+          defaultDate: '+1w',
+          changeMonth: true,
+          numberOfMonths: 1,
+        })
+        .on('change', function() {
+          from.datepicker('option', 'maxDate', this.value)
+        })
+
+    function getDate(element) {
+      var date
+      try {
+        date = $.datepicker.parseDate(dateFormat, element.value)
+      } catch (error) {
+        date = null
+      }
+      return date
+    }
+  })(jQuery)
+</script>
+
+<script type="text/javascript">
+  function filterByDate() {
+    var fromDate = document.getElementById('from').value
+    var toDate = document.getElementById('to').value
+
+    var gallery = document.getElementById('more-features')
+    var imageContainer = gallery.getElementsByClassName(
+      'gallery-image-container',
+    )
+
+    for (var i = 0; i < imageContainer.length; i++) {
+      var uploadDate = imageContainer[i]
+        .getElementsByTagName('a')[0]
+        .pathname.slice(1, 11)
+      if (uploadDate >= fromDate && uploadDate <= toDate) {
+        imageContainer[i].style.display = ''
+      } else {
+        imageContainer[i].style.display = 'none'
+      }
+    }
+  }
+</script>

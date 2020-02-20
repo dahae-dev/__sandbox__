@@ -1,0 +1,152 @@
+{
+  "basket": {
+    "items": [
+      {
+        "productVariant": {
+          "id": 5224387,
+          "code": "4547413953203",
+          "size": "260",
+          "status": "AVAILABLE",
+          "name": "シューズ ブラウン",
+          "price": {
+            "amount": 2500,
+            "symbol": "JPY",
+            "currency": "JPY"
+          },
+          "priceExcludingTax": {
+            "amount": 2315,
+            "symbol": "JPY",
+            "currency": "JPY"
+          },
+          "retailPrice": {
+            "amount": 8629,
+            "symbol": "JPY",
+            "currency": "JPY"
+          },
+          "description": "<p><strong>サイズ</strong></p><p>260 (対応サイズ:26cm)<br />270 (対応サイズ:27cm)</p><br /><br /><p><strong>素材</strong></p><p>甲皮:合成皮革 底材:合成底</p><br /><br /><p><strong>納期</strong></p><p>セール終了後10日前後にお届け致します。<br />※複数ブランドを同時注文する際は、ご注文いただいた全商品が揃ってからの発送となりますので、早めのお届けをご希望される際は、それぞれブランドを分けて注文していただくことをおすすめします。</p><br /><br /><p><strong>生産国</strong></p><p>中国</p><br /><br /><p><strong>仕様・詳細</strong></p><p>ヒール高3cm</p><br /><br /><p><strong>発送について</strong></p><p>本商品はWOMEN・MEN・KIDS・LIFESTYLE内で販売中の商品と同梱でお届けが可能です。1度のご注文内で適用可、追加注文分は適用外です。</p><br /><br /><p><strong>ご注意</strong></p><p>シューズの外箱・外袋の傷みは商品不備による返品として承っておりません。ご了承ください。<br /><br />返品は商品到着から8日以内にご返送ください。<br />返品期限、返品できない商品など<a href=\"/account/help/6/32\" target=\"_blank\">詳しくはこちら</a>。</p><br /><br />",
+          "properties": {
+            "サイズ": "260 (対応サイズ:26cm)<br />270 (対応サイズ:27cm)",
+            "素材": "甲皮:合成皮革 底材:合成底",
+            "納期": "セール終了後10日前後にお届け致します。<br />※複数ブランドを同時注文する際は、ご注文いただいた全商品が揃ってからの発送となりますので、早めのお届けをご希望される際は、それぞれブランドを分けて注文していただくことをおすすめします。",
+            "生産国": "中国",
+            "仕様・詳細": "ヒール高3cm",
+            "発送について": "本商品はWOMEN・MEN・KIDS・LIFESTYLE内で販売中の商品と同梱でお届けが可能です。1度のご注文内で適用可、追加注文分は適用外です。",
+            "ご注意": "シューズの外箱・外袋の傷みは商品不備による返品として承っておりません。ご了承ください。<br /><br />返品は商品到着から8日以内にご返送ください。<br />返品期限、返品できない商品など<a href=\"/account/help/6/32\" target=\"_blank\">詳しくはこちら</a>。"
+          },
+          "metas": [],
+          "minOrderCount": 1,
+          "maxOrderCount": 12,
+          "images": [
+            {
+              "1280": "//static.milleporte.com/EVENTS/180923AVAM/web/1280/4547413953203_1.jpg",
+              "80": "//static.milleporte.com/EVENTS/180923AVAM/web/80/4547413953203_1.jpg",
+              "320": "//static.milleporte.com/EVENTS/180923AVAM/web/320/4547413953203_1.jpg",
+              "310": "//static.milleporte.com/EVENTS/180923AVAM/web/med/4547413953203_1.jpg",
+              "160": "//static.milleporte.com/EVENTS/180923AVAM/web/160/4547413953203_1.jpg",
+              "640": "//static.milleporte.com/EVENTS/180923AVAM/web/640/4547413953203_1.jpg",
+              "62": "//static.milleporte.com/EVENTS/180923AVAM/web/tmb/4547413953203_1.jpg",
+              "346": "//static.milleporte.com/EVENTS/180923AVAM/web/detail/4547413953203_1.jpg",
+              "800": "//static.milleporte.com/EVENTS/180923AVAM/web/800/4547413953203_1.jpg",
+              "1001": "//static.milleporte.com/EVENTS/180923AVAM/web/original/4547413953203_1.jpg",
+              "960": "//static.milleporte.com/EVENTS/180923AVAM/web/960/4547413953203_1.jpg",
+              "480": "//static.milleporte.com/EVENTS/180923AVAM/web/480/4547413953203_1.jpg",
+              "72": "//static.milleporte.com/EVENTS/180923AVAM/web/small/4547413953203_1.jpg"
+            },
+            {
+              "1280": "//static.milleporte.com/EVENTS/180923AVAM/web/1280/4547413953203_2.jpg",
+              "80": "//static.milleporte.com/EVENTS/180923AVAM/web/80/4547413953203_2.jpg",
+              "320": "//static.milleporte.com/EVENTS/180923AVAM/web/320/4547413953203_2.jpg",
+              "310": "//static.milleporte.com/EVENTS/180923AVAM/web/med/4547413953203_2.jpg",
+              "160": "//static.milleporte.com/EVENTS/180923AVAM/web/160/4547413953203_2.jpg",
+              "640": "//static.milleporte.com/EVENTS/180923AVAM/web/640/4547413953203_2.jpg",
+              "62": "//static.milleporte.com/EVENTS/180923AVAM/web/tmb/4547413953203_2.jpg",
+              "346": "//static.milleporte.com/EVENTS/180923AVAM/web/detail/4547413953203_2.jpg",
+              "800": "//static.milleporte.com/EVENTS/180923AVAM/web/800/4547413953203_2.jpg",
+              "1001": "//static.milleporte.com/EVENTS/180923AVAM/web/original/4547413953203_2.jpg",
+              "960": "//static.milleporte.com/EVENTS/180923AVAM/web/960/4547413953203_2.jpg",
+              "480": "//static.milleporte.com/EVENTS/180923AVAM/web/480/4547413953203_2.jpg",
+              "72": "//static.milleporte.com/EVENTS/180923AVAM/web/small/4547413953203_2.jpg"
+            },
+            {
+              "1280": "//static.milleporte.com/EVENTS/180923AVAM/web/1280/4547413953203_3.jpg",
+              "80": "//static.milleporte.com/EVENTS/180923AVAM/web/80/4547413953203_3.jpg",
+              "320": "//static.milleporte.com/EVENTS/180923AVAM/web/320/4547413953203_3.jpg",
+              "310": "//static.milleporte.com/EVENTS/180923AVAM/web/med/4547413953203_3.jpg",
+              "160": "//static.milleporte.com/EVENTS/180923AVAM/web/160/4547413953203_3.jpg",
+              "640": "//static.milleporte.com/EVENTS/180923AVAM/web/640/4547413953203_3.jpg",
+              "62": "//static.milleporte.com/EVENTS/180923AVAM/web/tmb/4547413953203_3.jpg",
+              "346": "//static.milleporte.com/EVENTS/180923AVAM/web/detail/4547413953203_3.jpg",
+              "800": "//static.milleporte.com/EVENTS/180923AVAM/web/800/4547413953203_3.jpg",
+              "1001": "//static.milleporte.com/EVENTS/180923AVAM/web/original/4547413953203_3.jpg",
+              "960": "//static.milleporte.com/EVENTS/180923AVAM/web/960/4547413953203_3.jpg",
+              "480": "//static.milleporte.com/EVENTS/180923AVAM/web/480/4547413953203_3.jpg",
+              "72": "//static.milleporte.com/EVENTS/180923AVAM/web/small/4547413953203_3.jpg"
+            }
+          ]
+        },
+        "sale": {
+          "code": "181014AVAM",
+          "startAt": "2018-10-15T05:20:09.111+0000",
+          "endAt": "2018-10-15T05:20:09.111+0000",
+          "name": "a.v.v for men Vol.2",
+          "reading": "アーヴェーヴェー",
+          "description": "<div class=\"campaign-description\"><div class=\"header\">a.v.v for men Vol.2</div><div class=\"content\"><div class=\"paragraph\"><div class=\"line\">「a.v.v（アーヴェヴェ）」は、ヨーロピアンカジュアルをベースに、世界のトレンドを取り入れたウェアと雑貨を幅広く展開するブランド。大手アパレル会社イトキンが展開するオリジナルブランドで、フランス語の“Avignon villa（アヴィニョンヴィラ）」から由来しています。ファッション性とデイリー性を兼ね備えたバラエティ豊かな「a.v.v」のアイテムは、品のあるフレンチトラッドを適度に取り入れ、カジュアルスタイルからお出かけスタイルまであらゆるシーンを提案します。ウェアはレディスのほかメンズやキッズラインも豊富なラインナップ。親しみやすく、それでいて新鮮さを感じられる「a.v.v」のスタイルは親子でコーディネートが楽しめます。</div></div></div></div>",
+          "groups": ["MEN"],
+          "images": [
+            {
+              "160": "http://stc.milleporte.com/EVENTS/181014AVAM/banner_new/181014AVAM_banner_160.jpg",
+              "320": "http://stc.milleporte.com/EVENTS/181014AVAM/banner_new/181014AVAM_banner_320.jpg",
+              "480": "http://stc.milleporte.com/EVENTS/181014AVAM/banner_new/181014AVAM_banner_480.jpg",
+              "640": "http://stc.milleporte.com/EVENTS/181014AVAM/banner_new/181014AVAM_banner_640.jpg",
+              "800": "http://stc.milleporte.com/EVENTS/181014AVAM/banner_new/181014AVAM_banner_800.jpg",
+              "960": "http://stc.milleporte.com/EVENTS/181014AVAM/banner_new/181014AVAM_banner_960.jpg",
+              "1280": "http://stc.milleporte.com/EVENTS/181014AVAM/banner_new/181014AVAM_banner_1280.jpg",
+              "1600": "http://stc.milleporte.com/EVENTS/181014AVAM/banner_new/181014AVAM_banner_1600.jpg"
+            },
+            {
+              "320": "http://stc.milleporte.com/EVENTS/181014AVAM/web/181014AVAM_banner_grey.jpg"
+            }
+          ],
+          "staffDiscounts": [
+            {
+              "date": "2018-10-21",
+              "percentage": 0.2
+            },
+            {
+              "date": "2018-10-20",
+              "percentage": 0.0
+            },
+            {
+              "date": "2018-10-19",
+              "percentage": 0.0
+            }
+          ],
+          "sortIndex": 999
+        },
+        "count": 1,
+        "expiresAt": "2018-10-15T05:20:09.111+0000",
+        "discountPercentage": 0,
+        "discountAmount": {
+          "amount": 0,
+          "symbol": "JPY",
+          "currency": "JPY"
+        }
+      }
+    ],
+    "totalPrice": {
+      "amount": 2500,
+      "symbol": "JPY",
+      "currency": "JPY"
+    },
+    "totalRetailPrice": {
+      "amount": 8629,
+      "symbol": "JPY",
+      "currency": "JPY"
+    },
+    "totalDiscount": {
+      "amount": 0,
+      "symbol": "JPY",
+      "currency": "JPY"
+    }
+  }
+}

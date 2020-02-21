@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  </head>
+  <body>
+    <div
+      class="chart-container"
+      style="position: relative; width: 320px; height: 80px;"
+    >
+      <canvas id="myChart" width="320px" height="100px"></canvas>
+    </div>
+    <script>
+      var ctx = document.getElementById('myChart')
+      var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['108', '137', '98', '92', '221', '105'],
+          datasets: [
+            {
+              data: [108, 137, 98, 92, 221, 105],
+              backgroundColor: '#373c74',
+              barThickness: 14,
+              // datalabels: {
+              //   labels: {
+              //     title: {
+              //       color: '#373c74',
+              //     },
+              //   },
+              // },
+            },
+          ],
+        },
+        options: {
+          legend: {
+            display: false,
+          },
+          scales: {
+            xAxes: [
+              {
+                gridLines: {
+                  drawOnChartArea: false,
+                  color: '#373c74',
+                  drawTicks: false,
+                },
+              },
+            ],
+            yAxes: [
+              {
+                ticks: {
+                  display: false,
+                  beginAtZero: true,
+                },
+                gridLines: {
+                  drawOnChartArea: false,
+                  color: '#373c74',
+                  drawTicks: false,
+                },
+              },
+            ],
+          },
+          // plugins: {
+          //   datalabels: {
+          //     color: '#373c74',
+          //     font: {
+          //       weight: 'bold',
+          //       size: 16,
+          //     },
+          //   },
+          // },
+        },
+      })
+    </script>
+  </body>
+</html>

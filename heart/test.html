@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    .heart {
+      background-color: red;
+      height: 30px;
+      width: 30px;
+      transform: rotate(-45deg);
+      margin: 45% auto;
+      transition: background-color 1s;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      background-color: red;
+      height: 30px;
+      width: 30px;
+      position: absolute;
+      border-radius: 50%;
+      transition: background-color 1s;
+    }
+
+    .heart::before {
+      top: -15px;
+    }
+
+    .heart::after {
+      left: 15px;
+    }
+
+    .heart:hover,
+    .heart:hover::before,
+    .heart:hover::after {
+      background-color: maroon;
+    }
+  </style>
+</head>
+<body>
+  <div class="heart"></div>
+</body>

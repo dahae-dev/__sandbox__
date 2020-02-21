@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      height: 100vh;
+    }
+
+    [id='toggle-heart'] {
+      position: absolute;
+      left: -100vw;
+    }
+
+    [for='toggle-heart'] {
+      color: #aab8c2;
+      font-size: 2em;
+      cursor: pointer;
+      /* align-self: center; */
+      position: relative;
+    }
+
+    [for='toggle-heart']:before,
+    [for='toggle-heart']:after {
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      content: '';
+    }
+
+    [for='toggle-heart']:before {
+      margin: -2.25rem;
+      width: 4.5rem;
+      height: 4.5rem;
+      background: gold;
+      box-sizing: border-box;
+      border: solid 2.25rem #e2264d;
+      transform: scale(0);
+    }
+
+    [for='toggle-heart']:after {
+      margin: 0.1875rem;
+      width: 0.375rem;
+      height: 0.375rem;
+    }
+
+    [id='toggle-heart']:checked + label {
+      color: #e2264d;
+      will-change: font-size;
+      animation: heart 1s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+    }
+
+    [id='toggle-heart']:checked + label:before,
+    [id='toggle-heart']:checked + label:after {
+      animation: inherit;
+      animation-timing-function: cubic-bezier(0.21, 0.61, 0.35, 1);
+    }
+
+    [id='toggle-heart']:checked + label:before {
+      will-change: transform, border-color, border-width;
+      animation-name: bubble;
+    }
+
+    [id='toggle-heart']:checked + label:after {
+      animation-name: particles;
+    }
+
+    @keyframes heart {
+      0%,
+      17.5% {
+        font-size: 0;
+      }
+    }
+
+    @keyframes bubble {
+      15% {
+        border-color: #cc8ef5;
+        border-width: 2.25rem;
+        transform: scale(1);
+      }
+      30%,
+      100% {
+        border-color: #cc8ef5;
+        border-width: 0;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <input id="toggle-heart" type="checkbox" />
+  <label for="toggle-heart">❤</label>
+</body>

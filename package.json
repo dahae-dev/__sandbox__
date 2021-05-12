@@ -101,7 +101,7 @@
     "lodash.uniqwith": "^4.5.0",
     "luxon": "^1.16.0",
     "lz-string": "^1.4.4",
-    "mathjs": "^5.10.3",
+    "mathjs": "^7.5.1",
     "meow": "^5.0.0",
     "merge-img": "^2.1.0",
     "mongoose": "^5.5.9",

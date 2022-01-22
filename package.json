@@ -106,7 +106,7 @@
     "merge-img": "^2.1.0",
     "mongoose": "^5.5.9",
     "mz": "^2.7.0",
-    "nanoid": "^2.0.2",
+    "nanoid": "^3.1.31",
     "node-telegram-bot-api": "^0.30.0",
     "open": "^6.3.0",
     "p-map": "^2.1.0",

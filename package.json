@@ -132,7 +132,7 @@
     "rxjs": "^6.5.2",
     "serialize-error": "^4.1.0",
     "shallow-equal": "^1.1.0",
-    "sharp": "^0.22.1",
+    "sharp": "^0.30.5",
     "signale": "^1.4.0",
     "source-map-support": "^0.5.12",
     "split": "^1.0.1",

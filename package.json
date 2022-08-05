@@ -104,7 +104,7 @@
     "mathjs": "^5.10.3",
     "meow": "^5.0.0",
     "merge-img": "^2.1.0",
-    "mongoose": "^5.5.9",
+    "mongoose": "^5.7.5",
     "mz": "^2.7.0",
     "nanoid": "^2.0.2",
     "node-telegram-bot-api": "^0.30.0",
